@@ -7,6 +7,6 @@ Follow the instuctions [here](https://codelabs.developers.google.com/codelabs/cl
 Once Google Cloud is setup you can:
 
 run the script with ```python make_audio_file_from_ssml_input.py``` and it will
-read the input file input_ssml_text.html and save an mp3 file with the audio.
+read the input file ```input_ssml_text.html``` and save ```output.mp3``` file with the audio.
 
 input and output files can be specified with ```-i``` and ```-o``` command line options.
