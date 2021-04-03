@@ -1,48 +1,146 @@
-The Open<say-as interpret-as="characters">MC</say-as> data downloader offers command a line tool and a python <say-as interpret-as="characters">API</say-as> that both allow the downloading preprocessed h5 cross section files.
-There is a pypi installer for the package and users can install the software with pip install openmc data downloader.
+<speak>
 
-Once installed the command line tool can be used
+    The Open<say-as interpret-as="characters">MC</say-as> data downloader offers
+    a command line tool and a python <say-as interpret-as="characters">API</say-as>.
 
-All the options can be found using the minus minus help option
+    <break time="0.2s"/>
+    
+    Both interfaces allow the downloading of preprocessed h5 cross section files.
+    
+    <break time="0.15s"/>
+    
+    There is a pie pie installer for the package and users can install the
+    software with the command, pip install openmc data downloader.
+    
+    <break time="0.15s"/>
+    
+    Once installed the command line tool can be used.
+    
+    All the options can be found using the minus minus help argument.
+    
+    <break time="1.5s"/>
+    
+    A library or libraries are always needed and these should be provided in
+    order of preference.
+    
+    <break time="0.15s"/>
 
-A library or libraries are always needed and these should be provided in order of preference.
+    As you can see there are several options available including jeff 
+    <say-as interpret-as="cardinal">3.2</say-as>, fendl 3.1d, tendl 2019,
+    <say-as interpret-as="characters">WMP</say-as> and endf.
 
-As you can see there are several options available including JEFF 3.2, FENDL 3.1d, TENDL 2019, WMP and ENDF
+    <break time="0.15s"/>
 
-The downloader will try to find isotopes in the preferentially specified by the order of the libraries provided.
+    The downloader will try to find isotopes from the libraries provided.
 
-Once the isotope is found it will be downloaded and named after the library and isotope and a cross sections <say-as interpret-as="characters">xml</say-as> file will also be made.
+    <break time="0.2s"/>
+    
+    If multiple libraries are provided then they will be searched
+    preferentially in the input order.
+    
+    <break time="0.15s"/>
+    
+    Isotopes are downloaded and assigned filenames based on their library and
+    isotope.
+   
+    <break time="0.15s"/>
+    
+    Additionally a cross sections <say-as interpret-as="characters">xml</say-as>
+    file will also be made which allows use of the h5 files in
+    Open<say-as interpret-as="characters">MC</say-as>
+    
+    <break time="0.15s"/>
+    
+    This allows users easily to create a fully reproducible nuclear data environment.
+    
+    <break time="0.15s"/>
+    
+    You can download specific isotopes from specific libraries using minus l for
+    library and minus i for isotope.
 
-This create a reproducible nuclear data environment ideal.
+    <break time="1.5s"/>
 
-To download specific isotopes from specific libraries like this.
+    Running the same command again will detect that the cross sections have
+    been downloaded and skip the downloading.
 
--l for library and -i for isotope
+    <break time="1.5s"/>
 
-running the same command will detect that the cross sections have been downloaded and skip the downloading
+    Elements can also be requested using the minus e for elements argument, and
+    will automatically be expanded to their natural abundances.
 
-Elements can also be requested and they will be expanded to their natural abundances
+    <break time="1.5s"/>
 
--e for elements
+    Elements and isotopes can both be specified by combining minus e and minus
+    i arguments.
 
-Elements and isotopes can both be specified
+    <break time="1.5s"/>
 
-the h5 files can be sent to a specific directory using the -d flag
+    The h5 files can be sent to a specific directory using the minus d argument.
 
-h5 files needed for neutron and photon transport can be downloaded using the -p flag
+    <break time="1.5s"/>
+    
+    By default the h5 files for neutrons are downloaded, but different
+    particles, or a combination of particles can be specified using the minus p
+    for particles argument.
+    
+    <break time="0.15s"/>
 
-The package can also be imported into a python script and used in conjunction with Open<say-as interpret-as="characters">MC</say-as> to download the nuclear data required for the simulation.
+    Acceptable options are photon and neutron.
 
-In this example we see that Open<say-as interpret-as="characters">MC</say-as> data download has been imported as odd .
+    <break time="1.5s"/>
 
-an Open<say-as interpret-as="characters">MC</say-as> material has been made and that material has been passed to the just in time library generator with a preference for the fendl nuclear data library
+    The package can also be imported into a python script and used in
+    conjunction with Open<say-as interpret-as="characters">MC</say-as> to
+    download the nuclear data required for the simulation.
 
-this will now download the nuclear data and set the Open<say-as interpret-as="characters">MC</say-as> cross section
+    <break time="0.15s"/>
+    
+    In this example we see that Open<say-as interpret-as="characters">MC</say-as>
+    data download has been imported as <say-as interpret-as="characters">odd</say-as>.
+    
+    <break time="0.15s"/>
 
-the just in time download can also be called with a list of materials
+    An Open<say-as interpret-as="characters">MC</say-as> material has been made and
+    that material has been passed to the just in time library generator with a
+    preference for the fendl nuclear data library.
 
-and also an Open<say-as interpret-as="characters">MC</say-as> materials object can be used
+    <break time="0.15s"/>
+    
+    Once run, this python script will now download the nuclear data required
+    for simulating with this material.
+    
+    <break time="0.15s"/>
+    
+    The just in time download can also be called with a list of material objects.
+    
+    <break time="1.5s"/>
+    
+    Also an Open<say-as interpret-as="characters">MC</say-as> materials object
+    can be used.
+    
+    <break time="1.5s"/>
+    
+    Additionally Material objects and Multi Material objects from the
+    neutronics material maker can also be used.
+    
+    <break time="1.5s"/>
+    
+    The Open<say-as interpret-as="characters">MC</say-as> cross section
+    enviromental varible is automatically set to the path of the new cross
+    section.xml that has been generated on the fly.
+    
+    <break time="0.15s"/>
+    
+    This means that launching a simulation from the same python script tells
+    Open<say-as interpret-as="characters">MC</say-as> to make use of the 
+    recently downloaded cross sections.
+    
+    <break time="0.15s"/>
 
-additionally the neutronics material maker Material objects and Multi Material objects can also be used.
+    I hope you like the python package and it helps with your 
+    Open<say-as interpret-as="characters">MC</say-as> nuclear data needs
+    , if you have any feed back then feel free to raise issues on the github
+    repository page. Thanks for listening, the link for the repository is in
+    the description.
 
-The Open<say-as interpret-as="characters">MC</say-as> cross section enviromental varible is automatically set to the new corss section.xml that has been downloaded and a simulation can be initialed using the recently downloaded cross sections.
+</speak>
