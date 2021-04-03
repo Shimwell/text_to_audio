@@ -1,4 +1,4 @@
-The OpenMC data downloader offers command a line tool and a python API that both allow the downloading preprocessed h5 cross section files.
+The Open<say-as interpret-as="characters">MC</say-as> data downloader offers command a line tool and a python <say-as interpret-as="characters">API</say-as> that both allow the downloading preprocessed h5 cross section files.
 There is a pypi installer for the package and users can install the software with pip install openmc data downloader.
 
 Once installed the command line tool can be used
@@ -11,7 +11,7 @@ As you can see there are several options available including JEFF 3.2, FENDL 3.1
 
 The downloader will try to find isotopes in the preferentially specified by the order of the libraries provided.
 
-Once the isotope is found it will be downloaded and named after the library and isotope and a cross sections xml file will also be made.
+Once the isotope is found it will be downloaded and named after the library and isotope and a cross sections <say-as interpret-as="characters">xml</say-as> file will also be made.
 
 This create a reproducible nuclear data environment ideal.
 
@@ -31,18 +31,18 @@ the h5 files can be sent to a specific directory using the -d flag
 
 h5 files needed for neutron and photon transport can be downloaded using the -p flag
 
-The package can also be imported into a python script and used in conjunction with OpenMC to download the nuclear data required for the simulation.
+The package can also be imported into a python script and used in conjunction with Open<say-as interpret-as="characters">MC</say-as> to download the nuclear data required for the simulation.
 
-In this example we see that OpenMC data download has been imported as odd .
+In this example we see that Open<say-as interpret-as="characters">MC</say-as> data download has been imported as odd .
 
-an OpenMCmaterial has been made and that material has been passed to the just in time library generator with a preference for the fendl nuclear data library
+an Open<say-as interpret-as="characters">MC</say-as> material has been made and that material has been passed to the just in time library generator with a preference for the fendl nuclear data library
 
-this will now download the nuclear data and set the OpenMCcross section
+this will now download the nuclear data and set the Open<say-as interpret-as="characters">MC</say-as> cross section
 
 the just in time download can also be called with a list of materials
 
-and also an OpenMCmaterials object can be used
+and also an Open<say-as interpret-as="characters">MC</say-as> materials object can be used
 
 additionally the neutronics material maker Material objects and Multi Material objects can also be used.
 
-The OpenMCcross section enviromental varible is automatically set to the new corss section.xml that has been downloaded and a simulation can be initialed using the recently downloaded cross sections.
+The Open<say-as interpret-as="characters">MC</say-as> cross section enviromental varible is automatically set to the new corss section.xml that has been downloaded and a simulation can be initialed using the recently downloaded cross sections.
